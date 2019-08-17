@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Service</string>
+
+    <!--Main Activity-->
+    <string name="get_permission">Please allow the permission</string>
+    <string name="service_running">Service is already running</string>
+    <string name="enable_gps">Please enable the gps</string>
+    <string name="location_service">Location using service</string>
+    <string name="get_location">Get Location</string>
+    <string name="locality">Locality</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="state">State</string>
+    <string name="address">Address</string>
+    <string name="country_code">Country Code</string>
+    <string name="country_name">Country Name</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="admin">Admin</string>
+    <string name="sub_admin">Sub-Admin</string>
+    <string name="enable_gps_prompt">Your GPS seems to be disabled, do you want to enable it?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="sample_text">Sample text</string>
+    <string name="multiItemView">Multi ItemView</string>
+
+</resources>
