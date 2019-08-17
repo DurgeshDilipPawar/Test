@@ -210,9 +210,9 @@ public class MainActivity extends Activity {
     }
 
     /**
-     *      Register a BroadcastReceiver to be run in the main activity thread.  The
-     *      receiver will be called with any broadcast Intent that
-     *      matches filter, in the main application thread.
+     * Register a BroadcastReceiver to be run in the main activity thread.  The
+     * receiver will be called with any broadcast Intent that
+     * matches filter, in the main application thread.
      */
     @Override
 

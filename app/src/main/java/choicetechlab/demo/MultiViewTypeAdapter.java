@@ -24,8 +24,7 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
     private ArrayList<Model> dataSet;
 
     /**
-     *
-     * @param data data set
+     * @param data    data set
      * @param context activity context
      */
     public MultiViewTypeAdapter(ArrayList<Model> data, Context context) {
@@ -35,7 +34,6 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
     }
 
     /**
-     *
      * @param parent
      * @param viewType
      * @return
@@ -62,7 +60,8 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
     }
 
     /**
-     *  setting up the viewType among 4
+     * setting up the viewType among 4
+     *
      * @param position
      * @return
      */
@@ -84,8 +83,7 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
     }
 
     /**
-     *
-     * @param holder holder will be set depends of view type
+     * @param holder       holder will be set depends of view type
      * @param listPosition postion of current holder
      */
     @Override
@@ -134,7 +132,8 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
     }
 
     /**
-     *  this will return total count of 'dataset'
+     * this will return total count of 'dataset'
+     *
      * @return
      */
     @Override

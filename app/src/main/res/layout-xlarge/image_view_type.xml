@@ -5,13 +5,13 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/margin"
     card_view:cardCornerRadius="@dimen/cardCornerRadious"
-    card_view:cardElevation="10dp">
+    card_view:cardElevation="@dimen/cardElevation">
 
 
     <ImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/imageViewHeight"
         android:scaleType="centerCrop" />
 
 

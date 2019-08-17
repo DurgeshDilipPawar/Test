@@ -98,10 +98,6 @@ public class GoogleService extends Service implements LocationListener {
                 if (locationManager != null) {
                     location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
                     if (location != null) {
-
-//                        Log.e("latitude", location.getLatitude() + "");
-//                        Log.e("longitude", location.getLongitude() + "");
-
                         latitude = location.getLatitude();
                         longitude = location.getLongitude();
                         fn_update(location);
@@ -110,11 +106,11 @@ public class GoogleService extends Service implements LocationListener {
 
             }
 
-/**
- *       This GPS provider determines location using
- *      satellites. Depending on conditions, this provider may take a while to return
- *      a location fix. Requires the permission
- */
+            /**
+             *      This GPS provider determines location using
+             *      satellites. Depending on conditions, this provider may take a while to return
+             *      a location fix. Requires the permission
+             */
             if (isGPSEnable) {
                 location = null;
                 assert locationManager != null;
@@ -122,8 +118,6 @@ public class GoogleService extends Service implements LocationListener {
                 if (locationManager != null) {
                     location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
                     if (location != null) {
-//                        Log.e("latitude", location.getLatitude() + "");
-//                        Log.e("longitude", location.getLongitude() + "");
                         latitude = location.getLatitude();
                         longitude = location.getLongitude();
                         fn_update(location);

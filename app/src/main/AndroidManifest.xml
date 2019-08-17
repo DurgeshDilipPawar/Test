@@ -17,10 +17,13 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity android:name=".MultiViewItemsActivity"
+            android:configChanges="orientation|screenSize"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
-
-        <activity android:name=".MainActivity">
+        <!-- "android:configChanges="orientation" will save & restore selected item (radio button & rating bar) state after screen rotation -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
