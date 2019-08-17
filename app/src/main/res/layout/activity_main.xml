@@ -14,229 +14,233 @@
         android:text="@string/location_service"
         android:textColor="@color/textWhite"
         android:textSize="@dimen/textNormalHeight" />
+
     <ScrollView
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/startMargin"
-        android:layout_marginEnd="@dimen/endMargin"
-        android:orientation="vertical">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/latitude"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-            <TextView
-                android:id="@+id/tv_latitude"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/longitude"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-            <TextView
-                android:id="@+id/tv_longitude"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/state"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-            <TextView
-                android:id="@+id/tv_state"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/locality"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-            <TextView
-                android:id="@+id/tv_locality"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/postal_code"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-            <TextView
-                android:id="@+id/tv_postal_code"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/country_code"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-            <TextView
-                android:id="@+id/tv_countryCode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/country_name"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-            <TextView
-                android:id="@+id/tv_countryName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/textBlack"
-                android:textSize="@dimen/textNormalHeight" />
-
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="50dp"
-            android:orientation="horizontal">
+            android:layout_marginStart="@dimen/startMargin"
+            android:layout_marginEnd="@dimen/endMargin"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="150dp"
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/latitude"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+                <TextView
+                    android:id="@+id/tv_latitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/longitude"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+                <TextView
+                    android:id="@+id/tv_longitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/state"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/locality"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+                <TextView
+                    android:id="@+id/tv_locality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/postal_code"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+                <TextView
+                    android:id="@+id/tv_postal_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/country_code"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+                <TextView
+                    android:id="@+id/tv_countryCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/country_name"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+                <TextView
+                    android:id="@+id/tv_countryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/address"
-                android:textColor="@color/textBlack"
+                android:minHeight="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/address"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/textNormalHeight" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/get_location"
+                android:textAllCaps="false"
                 android:textSize="@dimen/textNormalHeight" />
 
-            <TextView
-                android:id="@+id/tv_address"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/textBlack"
+                android:text="@string/multiItemView"
+                android:textAllCaps="false"
                 android:textSize="@dimen/textNormalHeight" />
-
 
         </LinearLayout>
-        <Button
-            android:id="@+id/btn_start"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/get_location"
-            android:textAllCaps="false"
-            android:textSize="@dimen/textNormalHeight" />
-        <Button
-            android:id="@+id/btn_next"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/multiItemView"
-            android:textAllCaps="false"
-            android:textSize="@dimen/textNormalHeight" />
 
-    </LinearLayout>
-
-</ScrollView>
+    </ScrollView>
 
 
 </LinearLayout>

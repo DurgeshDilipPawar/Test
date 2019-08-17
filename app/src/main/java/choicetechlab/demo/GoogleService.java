@@ -8,7 +8,6 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -87,8 +86,8 @@ public class GoogleService extends Service implements LocationListener {
                     location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
                     if (location != null) {
 
-                        Log.e("latitude", location.getLatitude() + "");
-                        Log.e("longitude", location.getLongitude() + "");
+//                        Log.e("latitude", location.getLatitude() + "");
+//                        Log.e("longitude", location.getLongitude() + "");
 
                         latitude = location.getLatitude();
                         longitude = location.getLongitude();
@@ -105,8 +104,8 @@ public class GoogleService extends Service implements LocationListener {
                 if (locationManager != null) {
                     location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
                     if (location != null) {
-                        Log.e("latitude", location.getLatitude() + "");
-                        Log.e("longitude", location.getLongitude() + "");
+//                        Log.e("latitude", location.getLatitude() + "");
+//                        Log.e("longitude", location.getLongitude() + "");
                         latitude = location.getLatitude();
                         longitude = location.getLongitude();
                         fn_update(location);

@@ -1,15 +1,6 @@
 package choicetechlab.demo;
 
-import android.app.Service;
 import android.content.Context;
-import android.content.Intent;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.IBinder;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,22 +10,18 @@ import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
  * Created by Durgesh on 17/08/19.
  */
 public class MultiViewTypeAdapter extends RecyclerView.Adapter {
 
-    private  ArrayList<Model>dataSet;
     Context mContext;
     int total_types;
+    private ArrayList<Model> dataSet;
 
 
     public MultiViewTypeAdapter(ArrayList<Model> data, Context context) {
@@ -42,45 +29,6 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
         this.mContext = context;
         total_types = dataSet.size();
     }
-
-    public static class TextTypeViewHolder extends RecyclerView.ViewHolder {
-
-        TextView txtType;
-
-        public TextTypeViewHolder(View itemView) {
-            super(itemView);
-            this.txtType =   itemView.findViewById(R.id.type);
-        }
-    }
-
-    public static class ImageTypeViewHolder extends RecyclerView.ViewHolder {
-        ImageView image;
-
-        public ImageTypeViewHolder(View itemView) {
-            super(itemView);
-            this.image =itemView.findViewById(R.id.background);
-        }
-    }
-
-
-    public static class RatingBarTypeViewHolder extends RecyclerView.ViewHolder {
-        RatingBar ratingBar;
-
-        public RatingBarTypeViewHolder(View itemView) {
-            super(itemView);
-            this.ratingBar =itemView.findViewById(R.id.ratingBar);
-        }
-    }
-    public static class RadioButtonTypeViewHolder extends RecyclerView.ViewHolder {
-        RadioButton radioButton;
-
-        public RadioButtonTypeViewHolder(View itemView) {
-            super(itemView);
-            this.radioButton =itemView.findViewById(R.id.radioButton);
-        }
-
-    }
-
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -127,14 +75,14 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
         if (object != null) {
             switch (object.type) {
                 case Model.TEXT_TYPE:
-                    ((TextTypeViewHolder) holder).txtType.setText(dataSet.get( holder.getAdapterPosition()).getText());
+                    ((TextTypeViewHolder) holder).txtType.setText(dataSet.get(holder.getAdapterPosition()).getText());
 
                     break;
                 case Model.IMAGE_TYPE:
-                    ((ImageTypeViewHolder) holder).image.setImageResource(dataSet.get( holder.getAdapterPosition()).getImage());
+                    ((ImageTypeViewHolder) holder).image.setImageResource(dataSet.get(holder.getAdapterPosition()).getImage());
                     break;
                 case Model.RATING_BAR:
-                    ((RatingBarTypeViewHolder) holder).ratingBar.setRating( dataSet.get(holder.getAdapterPosition()).getRatings());
+                    ((RatingBarTypeViewHolder) holder).ratingBar.setRating(dataSet.get(holder.getAdapterPosition()).getRatings());
                     ((RatingBarTypeViewHolder) holder).ratingBar.setOnRatingBarChangeListener(null);
                     ((RatingBarTypeViewHolder) holder).ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
                         // Called when the user swipes the RatingBar
@@ -168,5 +116,43 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
     @Override
     public int getItemCount() {
         return dataSet.size();
+    }
+
+    public static class TextTypeViewHolder extends RecyclerView.ViewHolder {
+
+        TextView txtType;
+
+        public TextTypeViewHolder(View itemView) {
+            super(itemView);
+            this.txtType = itemView.findViewById(R.id.type);
+        }
+    }
+
+    public static class ImageTypeViewHolder extends RecyclerView.ViewHolder {
+        ImageView image;
+
+        public ImageTypeViewHolder(View itemView) {
+            super(itemView);
+            this.image = itemView.findViewById(R.id.background);
+        }
+    }
+
+    public static class RatingBarTypeViewHolder extends RecyclerView.ViewHolder {
+        RatingBar ratingBar;
+
+        public RatingBarTypeViewHolder(View itemView) {
+            super(itemView);
+            this.ratingBar = itemView.findViewById(R.id.ratingBar);
+        }
+    }
+
+    public static class RadioButtonTypeViewHolder extends RecyclerView.ViewHolder {
+        RadioButton radioButton;
+
+        public RadioButtonTypeViewHolder(View itemView) {
+            super(itemView);
+            this.radioButton = itemView.findViewById(R.id.radioButton);
+        }
+
     }
 }

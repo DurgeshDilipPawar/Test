@@ -17,7 +17,7 @@ public class Model implements Serializable {
     public int image;
     public float ratings;
     public String text;
-    public boolean isChecked=false;
+    public boolean isChecked = false;
 
     public Model(int type, String text, int image, float ratings) {
         this.type = type;
@@ -26,9 +26,11 @@ public class Model implements Serializable {
         this.ratings = ratings;
 
     }
-public Model(){
 
-}
+    public Model() {
+
+    }
+
     public Integer getType() {
         return type;
     }
@@ -36,8 +38,6 @@ public Model(){
     public void setType(Integer type) {
         this.type = type;
     }
-
-
 
 
     public float getRatings() {

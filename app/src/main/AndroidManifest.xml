@@ -25,6 +25,9 @@
         </activity>
 
         <service android:name=".GoogleService" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="9bd7bab56582ecf42aa9aaabc6294d8877eb9c00" />
     </application>
 
 </manifest>

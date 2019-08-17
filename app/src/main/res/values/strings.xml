@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Service</string>
+    <string name="app_name">ChoiceTestLabDemo</string>
 
     <!--Main Activity-->
     <string name="get_permission">Please allow the permission</string>
@@ -15,8 +15,6 @@
     <string name="country_code">Country Code</string>
     <string name="country_name">Country Name</string>
     <string name="postal_code">Postal Code</string>
-    <string name="admin">Admin</string>
-    <string name="sub_admin">Sub-Admin</string>
     <string name="enable_gps_prompt">Your GPS seems to be disabled, do you want to enable it?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>

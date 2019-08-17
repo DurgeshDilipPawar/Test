@@ -22,10 +22,14 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.crashlytics.android.Crashlytics;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends Activity {
     private static final int REQUEST_PERMISSIONS = 100;
@@ -78,6 +82,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         btn_start = findViewById(R.id.btn_start);
