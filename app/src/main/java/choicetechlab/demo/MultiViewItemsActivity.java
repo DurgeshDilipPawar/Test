@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class MultiViewItemsActivity extends AppCompatActivity {
     private ArrayList<Model> list = new ArrayList();
-    private int images[] = {R.drawable.sample_image_one, R.drawable.sample_image_two, R.drawable.sample_image_three, R.drawable.sample_image_four};
+    private int images[] = {R.drawable.hotel_image_one, R.drawable.hotel_image_two, R.drawable.hotel_image_three, R.drawable.hotel_image_four};
 
     /**
      * @param min min start value
@@ -33,7 +33,9 @@ public class MultiViewItemsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
-        /*To Inflate item 10 times adding 40 items with random TYPES*/
+        /**
+         * To Inflate item 10 times adding 40 items with random TYPES
+         */
         for (int i = 0; i < 40; i++) {
             Model model = new Model();
             model.setText(getResources().getString(R.string.sample_text) + "\t" + i);

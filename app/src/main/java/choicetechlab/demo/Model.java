@@ -7,25 +7,23 @@ import java.io.Serializable;
  * Created by Durgesh on 17/08/19.
  */
 public class Model implements Serializable {
-
+    /**
+     * setting up 4 types of view with unique id
+     */
     public static final int TEXT_TYPE = 0;
     public static final int IMAGE_TYPE = 1;
     public static final int RATING_BAR = 2;
     public static final int RADIO_BUTTON = 3;
 
+    /**
+     * dataset row values
+     */
     public int type;
     public int image;
     public float ratings;
     public String text;
     public boolean isChecked = false;
 
-    public Model(int type, String text, int image, float ratings) {
-        this.type = type;
-        this.text = text;
-        this.image = image;
-        this.ratings = ratings;
-
-    }
 
     public Model() {
 

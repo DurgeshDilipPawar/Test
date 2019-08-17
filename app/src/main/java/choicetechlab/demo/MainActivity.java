@@ -41,6 +41,10 @@ public class MainActivity extends Activity {
     Double latitude, longitude;
     Geocoder geocoder;
     LocationManager manager;
+    /**
+     * Base class for code that receives and handles broadcast intents sent by
+     * {@link android.content.Context#sendBroadcast(Intent)}.
+     */
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -79,12 +83,13 @@ public class MainActivity extends Activity {
         }
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
-
+        /*set up views by ids*/
         btn_start = findViewById(R.id.btn_start);
         btn_next = findViewById(R.id.btn_next);
         tv_address = findViewById(R.id.tv_address);
@@ -95,8 +100,9 @@ public class MainActivity extends Activity {
         tv_postal_code = findViewById(R.id.tv_postal_code);
         tv_countryCode = findViewById(R.id.tv_countryCode);
         tv_countryName = findViewById(R.id.tv_countryName);
-        manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
+
+        manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         geocoder = new Geocoder(this, Locale.getDefault());
         mPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         medit = mPref.edit();
@@ -133,6 +139,9 @@ public class MainActivity extends Activity {
         fn_permission();
     }
 
+    /**
+     * Determine whether user have been granted a particular permission.
+     */
     private void fn_permission() {
         if ((ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)) {
 
@@ -152,7 +161,11 @@ public class MainActivity extends Activity {
         }
     }
 
-    /*Prompt user to enable GPS */
+
+    /**
+     * Prompt user to enable GPS
+     * Show settings to allow configuration of current location
+     */
     private void buildAlertMessageNoGps() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(getResources().getString(R.string.enable_gps_prompt))
@@ -172,7 +185,13 @@ public class MainActivity extends Activity {
         alert.show();
     }
 
-
+    /**
+     * Callback for the result from requesting permissions
+     *
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -190,12 +209,26 @@ public class MainActivity extends Activity {
         }
     }
 
+    /**
+     *      Register a BroadcastReceiver to be run in the main activity thread.  The
+     *      receiver will be called with any broadcast Intent that
+     *      matches filter, in the main application thread.
+     */
     @Override
+
     protected void onResume() {
         super.onResume();
         registerReceiver(broadcastReceiver, new IntentFilter(GoogleService.str_receiver));
     }
 
+    /**
+     * Unregister a previously registered BroadcastReceiver.  <em>All</em>
+     * filters that have been registered for this BroadcastReceiver will be
+     * removed.
+     * The BroadcastReceiver to unregister.
+     *
+     * @see #registerReceiver
+     */
     @Override
     protected void onPause() {
         super.onPause();

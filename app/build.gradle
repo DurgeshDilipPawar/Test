@@ -39,6 +39,8 @@ dependencies {
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+    //AndroidX support
     implementation 'androidx.appcompat:appcompat:1.0.2'
     //noinspection UseOfBundledGooglePlayServices
     /*instead of service lib bundle *.location is for location related usage*/

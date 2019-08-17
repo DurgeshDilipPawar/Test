@@ -23,13 +23,23 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
     int total_types;
     private ArrayList<Model> dataSet;
 
-
+    /**
+     *
+     * @param data data set
+     * @param context activity context
+     */
     public MultiViewTypeAdapter(ArrayList<Model> data, Context context) {
         this.dataSet = data;
         this.mContext = context;
         total_types = dataSet.size();
     }
 
+    /**
+     *
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -51,6 +61,11 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
         return null;
     }
 
+    /**
+     *  setting up the viewType among 4
+     * @param position
+     * @return
+     */
     @Override
     public int getItemViewType(int position) {
 
@@ -68,6 +83,11 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
         }
     }
 
+    /**
+     *
+     * @param holder holder will be set depends of view type
+     * @param listPosition postion of current holder
+     */
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int listPosition) {
 
@@ -113,14 +133,22 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
 
     }
 
+    /**
+     *  this will return total count of 'dataset'
+     * @return
+     */
     @Override
     public int getItemCount() {
         return dataSet.size();
     }
 
+    /**
+     * ViewHolder for Text View Type
+     */
     public static class TextTypeViewHolder extends RecyclerView.ViewHolder {
 
         TextView txtType;
+
 
         public TextTypeViewHolder(View itemView) {
             super(itemView);
@@ -128,6 +156,9 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
         }
     }
 
+    /**
+     * ViewHolder for Image View Type
+     */
     public static class ImageTypeViewHolder extends RecyclerView.ViewHolder {
         ImageView image;
 
@@ -137,6 +168,9 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
         }
     }
 
+    /**
+     * ViewHolder for RatingBar View Type
+     */
     public static class RatingBarTypeViewHolder extends RecyclerView.ViewHolder {
         RatingBar ratingBar;
 
@@ -146,6 +180,9 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
         }
     }
 
+    /**
+     * ViewHolder for Radio Button View Type
+     */
     public static class RadioButtonTypeViewHolder extends RecyclerView.ViewHolder {
         RadioButton radioButton;
 

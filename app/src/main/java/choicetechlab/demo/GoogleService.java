@@ -71,6 +71,14 @@ public class GoogleService extends Service implements LocationListener {
 
     }
 
+    /**
+     * Location Manager
+     * This class provides access to the system location services.  These
+     * services allow applications to obtain periodic updates of the
+     * device's geographical location, or to fire an application-specified
+     * when the device enters the proximity of a given
+     * geographical location.
+     */
     private void fn_getlocation() {
         locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
         isGPSEnable = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
@@ -79,6 +87,11 @@ public class GoogleService extends Service implements LocationListener {
         if (!isGPSEnable && !isNetworkEnable) {
         } else {
 
+            /**
+             * This provider determines location based on
+             * availability of cell tower and WiFi access points. Results are retrieved
+             * by means of a network lookup.
+             */
             if (isNetworkEnable) {
                 location = null;
                 locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0, this);
@@ -97,9 +110,14 @@ public class GoogleService extends Service implements LocationListener {
 
             }
 
-
+/**
+ *       This GPS provider determines location using
+ *      satellites. Depending on conditions, this provider may take a while to return
+ *      a location fix. Requires the permission
+ */
             if (isGPSEnable) {
                 location = null;
+                assert locationManager != null;
                 locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, this);
                 if (locationManager != null) {
                     location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
@@ -118,6 +136,11 @@ public class GoogleService extends Service implements LocationListener {
 
     }
 
+    /**
+     * Broadcast the given intent to all interested BroadcastReceivers.
+     *
+     * @param location
+     */
     private void fn_update(Location location) {
 
         intent.putExtra("latutide", location.getLatitude() + "");
@@ -125,10 +148,18 @@ public class GoogleService extends Service implements LocationListener {
         sendBroadcast(intent);
     }
 
+    /**
+     * A task that can be scheduled for one-time or repeated execution by a Timer.
+     */
     private class TimerTaskToGetLocation extends TimerTask {
         @Override
         public void run() {
-
+/*
+  When an object implementing interface Runnable  is used
+   to create a thread, starting the thread causes the object's
+   run method to be called in that separately executing
+   thread.
+ */
             mHandler.post(new Runnable() {
                 @Override
                 public void run() {
@@ -138,6 +169,4 @@ public class GoogleService extends Service implements LocationListener {
 
         }
     }
-
-
 }

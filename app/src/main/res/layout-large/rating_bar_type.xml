@@ -1,0 +1,25 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|center"
+    android:layout_margin="@dimen/margin"
+    card_view:cardCornerRadius="@dimen/cardCornerRadious"
+    card_view:cardElevation="@dimen/cardElevation">
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:numStars="5"
+        android:stepSize="0.5" />
+
+</androidx.cardview.widget.CardView>
