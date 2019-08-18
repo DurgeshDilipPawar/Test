@@ -2,12 +2,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_background"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="10">
 
     <TextView
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
         android:background="@color/colorPrimary"
         android:gravity="center"
         android:text="@string/location_service"
@@ -15,13 +17,14 @@
         android:textSize="@dimen/textNormalHeight" />
 
     <ScrollView
-
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="7.5">
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginStart="@dimen/startMargin"
             android:layout_marginEnd="@dimen/endMargin"
             android:orientation="vertical">
@@ -221,25 +224,58 @@
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btn_start"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/get_location"
-                android:textAllCaps="false"
-                android:textSize="@dimen/textNormalHeight" />
-
-            <Button
-                android:id="@+id/btn_next"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/multiItemView"
-                android:textAllCaps="false"
-                android:textSize="@dimen/textNormalHeight" />
 
         </LinearLayout>
 
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="@string/start_location"
+            android:textAllCaps="false"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/textNormalHeight" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="@string/stop_location"
+            android:textAllCaps="false"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/textNormalHeight" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="0.7"
+        android:background="@drawable/btn_style"
+        android:text="@string/multiItemView"
+        android:textAllCaps="false"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/textNormalHeight" />
 
 
 </LinearLayout>

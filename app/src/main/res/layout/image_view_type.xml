@@ -7,12 +7,10 @@
     card_view:cardCornerRadius="@dimen/cardCornerRadious"
     card_view:cardElevation="@dimen/cardElevation">
 
-
     <ImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="@dimen/imageViewHeight"
         android:scaleType="centerCrop" />
-
 
 </androidx.cardview.widget.CardView>

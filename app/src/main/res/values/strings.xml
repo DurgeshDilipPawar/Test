@@ -3,10 +3,7 @@
 
     <!--Main Activity-->
     <string name="get_permission">Please allow the permission</string>
-    <string name="service_running">Service is already running</string>
-    <string name="enable_gps">Please enable the gps</string>
     <string name="location_service">Location using service</string>
-    <string name="get_location">Get Location</string>
     <string name="locality">Locality</string>
     <string name="latitude">Latitude</string>
     <string name="longitude">Longitude</string>
@@ -19,6 +16,11 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="sample_text">Sample text</string>
-    <string name="multiItemView">Multi ItemView</string>
+    <string name="multiItemView">MultiItem RecyclerView</string>
+    <string name="start_location">Start Location</string>
+    <string name="stop_location">Stop Location</string>
+    <string name="location_service_stopped">Location Service Stopped</string>
+    <string name="location_service_started">Location Service Started</string>
+    <string name="view_info">Adding four views randomly</string>
 
 </resources>

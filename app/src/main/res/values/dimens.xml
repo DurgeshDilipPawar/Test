@@ -3,7 +3,6 @@
 
     <!--Main Activity-->
     <dimen name="textNormalHeight">20sp</dimen>
-    <dimen name="toolbar">50dp</dimen>
     <dimen name="startMargin">10dp</dimen>
     <dimen name="endMargin">10dp</dimen>
     <dimen name="margin">5dp</dimen>

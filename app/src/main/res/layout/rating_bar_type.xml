@@ -1,29 +1,31 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:background="@color/white_background"
-    android:gravity="center">
+    android:layout_margin="@dimen/margin"
+    card_view:cardCornerRadius="@dimen/cardCornerRadious"
+    card_view:cardElevation="@dimen/cardElevation">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        card_view:cardCornerRadius="@dimen/cardCornerRadious"
-        card_view:cardElevation="@dimen/cardElevation">
+        android:layout_gravity="center"
+        android:gravity="center">
 
         <TextView
-            android:id="@+id/type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <RatingBar
             android:id="@+id/ratingBar"
-            android:layout_width="match_parent"
+            style="@style/AppThemeRatingBar"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:numStars="5"
             android:stepSize="0.5" />
+    </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
-</RelativeLayout>
+
+</androidx.cardview.widget.CardView>
