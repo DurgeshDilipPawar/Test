@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="choicetechlab.demo.activities.MainActivity">
+    tools:context="com.choicetechlab.demo.activities.MainActivity">
 
     <TextView
         android:id="@+id/toolbar"
