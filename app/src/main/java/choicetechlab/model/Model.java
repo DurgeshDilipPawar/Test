@@ -1,4 +1,4 @@
-package choicetechlab.demo;
+package choicetechlab.model;
 
 
 import java.io.Serializable;

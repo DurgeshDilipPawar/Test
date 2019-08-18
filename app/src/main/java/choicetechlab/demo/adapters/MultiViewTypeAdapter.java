@@ -1,4 +1,4 @@
-package choicetechlab.demo;
+package choicetechlab.demo.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,6 +13,9 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import choicetechlab.demo.R;
+import choicetechlab.model.Model;
 
 /**
  * Created by Durgesh on 17/08/19.

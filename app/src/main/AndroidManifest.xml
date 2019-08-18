@@ -16,13 +16,14 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".MultiViewItemsActivity"
+        <activity
+            android:name=".activities.MultiViewItemsActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
         <!-- "android:configChanges="orientation" will save & restore selected item (radio button & rating bar) state after screen rotation -->
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +32,7 @@
         </activity>
 
         <!-- Background service to get location from network/gps depends on availablity of resource -->
-        <service android:name=".GoogleService" />
+        <service android:name=".services.GoogleService" />
 
         <!-- Firebase Crashlystics integration for app crash reporting -->
         <meta-data

@@ -1,4 +1,4 @@
-package choicetechlab.demo;
+package choicetechlab.demo.activities;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -29,6 +29,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
+import choicetechlab.demo.R;
+import choicetechlab.demo.services.GoogleService;
 import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends Activity {

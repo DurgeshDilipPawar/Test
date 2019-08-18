@@ -1,4 +1,4 @@
-package choicetechlab.demo;
+package choicetechlab.demo.activities;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -12,9 +12,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.Random;
 
+import choicetechlab.demo.R;
+import choicetechlab.demo.adapters.MultiViewTypeAdapter;
+import choicetechlab.model.Model;
+
 public class MultiViewItemsActivity extends AppCompatActivity {
     private ArrayList<Model> list = new ArrayList();
-    private int images[] = {R.drawable.hotel_image_one, R.drawable.hotel_image_two, R.drawable.hotel_image_three, R.drawable.hotel_image_four};
+    private int[] images = {R.drawable.hotel_image_one, R.drawable.hotel_image_two, R.drawable.hotel_image_three, R.drawable.hotel_image_four};
 
     /**
      * @param min min start value

@@ -1,4 +1,4 @@
-package choicetechlab.demo;
+package choicetechlab.demo.services;
 
 import android.app.Service;
 import android.content.Intent;
